@@ -1,10 +1,13 @@
 {
-    "name": "jspreadsheet-ce",
+    "name": "@hirulez/jspreadsheet-ce",
     "title": "The Javascript Spreadsheet",
-    "description": "Jspreadsheet is a lightweight, vanilla javascript plugin to create amazing web-based interactive data grids with spreadsheet like controls compatible with Excel, Google Spreadsheets and any other spreadsheet software.",
+    "description": "Fork of jspreadsheet-ce 4.15.0 that renders column and row headers as th with scope for accessibility.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/jspreadsheet/ce.git"
+        "url": "https://github.com/hirulez/ce.git"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "author": {
         "name": "Contact <contact@jspreadsheet.com>"
@@ -75,10 +78,10 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "version": "4.15.0",
-    "bugs": "https://github.com/jspreadsheet/ce/issues",
-    "homepage": "https://github.com/jspreadsheet/ce",
-    "download": "https://github.com/jspreadsheet/ce/archive/master.zip",
+    "version": "4.15.0-a11y.1",
+    "bugs": "https://github.com/hirulez/ce/issues",
+    "homepage": "https://github.com/hirulez/ce/tree/protocols-a11y",
+    "download": "https://github.com/hirulez/ce/archive/protocols-a11y.zip",
     "scripts": {
         "test": "mocha --recursive --require=mocha.config.cjs",
         "test:watch": "mocha --recursive --watch --parallel --reporter min",
