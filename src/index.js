@@ -1192,10 +1192,11 @@ if (! formula && typeof(require) === 'function') {
             if (! index) {
                 index = parseInt(j + 1);
             }
-            // Row number label
-            var td = document.createElement('td');
+            // Row number label, a row header for assistive technology
+            var td = document.createElement('th');
             td.innerHTML = index;
             td.setAttribute('data-y', j);
+            td.setAttribute('scope', 'row');
             td.className = 'jexcel_row';
             obj.rows[j].appendChild(td);
 
@@ -1401,8 +1402,9 @@ if (! formula && typeof(require) === 'function') {
             var colWidth = obj.options.columns[colNumber].width ? obj.options.columns[colNumber].width : obj.options.defaultColWidth;
             var colAlign = obj.options.columns[colNumber].align ? obj.options.columns[colNumber].align : obj.options.defaultColAlign;
 
-            // Create header cell
-            obj.headers[colNumber] = document.createElement('td');
+            // Create header cell, a column header for assistive technology
+            obj.headers[colNumber] = document.createElement('th');
+            obj.headers[colNumber].setAttribute('scope', 'col');
             if (obj.options.stripHTML) {
                 obj.headers[colNumber].textContent = obj.options.columns[colNumber].title ? obj.options.columns[colNumber].title : jexcel.getColumnName(colNumber);
             } else {

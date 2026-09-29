@@ -76,8 +76,10 @@
     border-bottom: 1px solid #ccc;
 }
 
-.jexcel > thead > tr > td
+.jexcel > thead > tr > td,
+.jexcel > thead > tr > th
 {
+    font-weight: normal;
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
     border-right: 1px solid transparent;
@@ -93,23 +95,24 @@
     z-index:2;
 }
 
-.jexcel_container.with-toolbar .jexcel > thead > tr > td
+.jexcel_container.with-toolbar .jexcel > thead > tr > td,
+.jexcel_container.with-toolbar .jexcel > thead > tr > th
 {
     top:42px;
 }
 
-.jexcel > thead > tr > td.dragging
+.jexcel > thead > tr > th.dragging
 {
     background-color:#fff;
     opacity:0.5;
 }
 
-.jexcel > thead > tr > td.selected
+.jexcel > thead > tr > th.selected
 {
     background-color:#dcdcdc;
 }
 
-.jexcel > thead > tr > td.arrow-up
+.jexcel > thead > tr > th.arrow-up
 {
     background-repeat:no-repeat;
     background-position:center right 5px;
@@ -117,7 +120,7 @@
     text-decoration:underline;
 }
 
-.jexcel > thead > tr > td.arrow-down
+.jexcel > thead > tr > th.arrow-down
 {
     background-repeat:no-repeat;
     background-position:center right 5px;
@@ -125,14 +128,14 @@
     text-decoration:underline;
 }
 
-.jexcel > tbody > tr > td:first-child
+.jexcel > tbody > tr > th:first-child
 {
     position:relative;
     background-color:#f3f3f3;
     text-align:center;
 }
 
-.jexcel > tbody.resizable > tr > td:first-child::before
+.jexcel > tbody.resizable > tr > th:first-child::before
 {
     content:'\00a0';
     width:100%;
@@ -143,7 +146,7 @@
     cursor:row-resize;
 }
 
-.jexcel > tbody.draggable > tr > td:first-child::after
+.jexcel > tbody.draggable > tr > th:first-child::after
 {
     content:'\00a0';
     width:3px;
@@ -154,14 +157,17 @@
     cursor:move;
 }
 
-.jexcel > tbody > tr.dragging > td
+.jexcel > tbody > tr.dragging > td,
+.jexcel > tbody > tr.dragging > th
 {
     background-color:#eee;
     opacity:0.5;
 }
 
-.jexcel > tbody > tr > td
+.jexcel > tbody > tr > td,
+.jexcel > tbody > tr > th
 {
+    font-weight: normal;
     border-top:1px solid #ccc;
     border-left:1px solid #ccc;
     border-right:1px solid transparent;
@@ -191,7 +197,7 @@
 {
     color:rgba(0,0,0,0.3)
 }
-.jexcel > tbody > tr.selected > td:first-child
+.jexcel > tbody > tr.selected > th:first-child
 {
     background-color:#dcdcdc;
 }
@@ -425,7 +431,7 @@
     text-shadow: 0px 0px 5px #fff;
 }
 
-.jexcel, .jexcel td, .jexcel_corner
+.jexcel, .jexcel td, .jexcel th, .jexcel_corner
 {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -690,7 +696,7 @@
     background-color:#ddd;
 }
 
-.jexcel_hidden_index > tbody > tr > td:first-child,
+.jexcel_hidden_index > tbody > tr > th:first-child,
 .jexcel_hidden_index > thead > tr > td:first-child,
 .jexcel_hidden_index > tfoot > tr > td:first-child,
 .jexcel_hidden_index > colgroup > col:first-child
